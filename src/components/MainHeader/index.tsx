@@ -3,6 +3,9 @@ import emojis from "../../utils/emojis";
 
 import { Container, Profile, Welcome, Username } from "./styles";
 
+// Components
+import Toggle from "../Toggle/index";
+
 const MainHeader: React.FC = () => {
   const emoji = useMemo(() => {
     return emojis[Math.floor(Math.random() * emojis.length)];
@@ -10,7 +13,7 @@ const MainHeader: React.FC = () => {
 
   return (
     <Container>
-      <h1>Toggle</h1>
+      <Toggle />
       <Profile>
         <Welcome>Olá, {emoji} </Welcome>
         <Username>Vyctor Guimarães</Username>
